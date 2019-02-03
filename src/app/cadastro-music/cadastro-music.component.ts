@@ -41,7 +41,7 @@ export class CadastroMusicComponent implements OnInit {
 
   }
   cadastro() {
-    let musica: User = this.formulario.getRawValue();
+    this.novaMusic = this.formulario.getRawValue();
     this.srv.post(,this.music).subscribe(resposta => {
       console.log(resposta);
     });
