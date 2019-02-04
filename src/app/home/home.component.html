@@ -1,3 +1,30 @@
-<p>
-  home works!
-</p>
+
+<div class="container" *ngIf = "aparece()">
+  <div class="flex">
+    <div class="tabela">
+      <table class="table table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Cantor</th>
+            <th scope="col">Gênero</th>
+            <th scope="col">Música</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let musica of musicas">
+            <th>{{musica.nomeDoCantor}}</th>
+            <th>{{musica.generoDaMusica}}</th>
+            <th>{{musica.nomeDaMusica}}</th>
+            <th><button class="btn btn-danger" (click)="delete()">Deletar</button>
+            </th>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

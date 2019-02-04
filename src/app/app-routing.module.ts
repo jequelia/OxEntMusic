@@ -4,7 +4,7 @@ import { CadastroMusicComponent } from './cadastro-music/cadastro-music.componen
 
 const routes: Routes = [
   {path: '', redirectTo: 'cadastroMusic', pathMatch: 'full'},
-  {path: 'cadastroMusic', component:CadastroMusicComponent},
+  {path: 'cadastroMusic', component: CadastroMusicComponent},
 ];
 
 @NgModule({

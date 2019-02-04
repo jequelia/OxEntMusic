@@ -10,7 +10,6 @@ import { CadastroService } from '../service/cadastro.service';
 })
 export class CadastroMusicComponent implements OnInit {
 
-  musica: Array<any> = new Array<any>();
 
   formulario: FormGroup;
 
@@ -36,11 +35,6 @@ export class CadastroMusicComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.srv.get('').subscribe(resposta => {
-      console.log(resposta);
-      this.musica = resposta;
-    })
-
   }
   cadastro() {
     this.novaMusic = this.formulario.getRawValue();

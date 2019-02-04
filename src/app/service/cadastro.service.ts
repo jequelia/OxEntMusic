@@ -6,7 +6,7 @@ import { API_URL } from 'src/environments/endpoint'
   providedIn: 'root'
 })
 export class CadastroService {
-  
+
   constructor(private http : HttpClient) { }
 
 
