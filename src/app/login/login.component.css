@@ -1,0 +1,48 @@
+.flex{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.cont{
+  display: flex;
+  width: 63%;
+  height: 448px;
+  background-image: linear-gradient( to right, #28a745, #17a2b8 98%);
+  margin: 75px auto;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.text{
+
+    text-align: center;
+    margin: 30% auto;
+
+}
+
+/* flex-filho, define tamanho, largura, cor, posição e bordas */
+.user{
+  display: flex;
+  width: 46%;
+  height: 477px;
+  background: #e1ebec;
+  margin: 0% 1% 1% 25%;
+  border-radius: 10px;
+}
+
+
+/* flex-filho que ajusta a imagem e o forms dentro do flex user */
+.input{
+  display: flex;
+  flex-direction: column;
+  margin: 49px auto;
+  width: 89%;
+  align-items: center;
+}
+
+.btn {
+
+      margin: 14% 1% 1% 1%;
+
+}
