@@ -34,7 +34,7 @@ export class CadastroMusicComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.srv.get().subscribe(resposta => {
+    this.srv.get('').subscribe(resposta => {
       console.log(resposta);
       this.musica = resposta;
     })
@@ -42,7 +42,7 @@ export class CadastroMusicComponent implements OnInit {
   }
   cadastro() {
     this.novaMusic = this.formulario.getRawValue();
-    this.srv.post(,this.music).subscribe(resposta => {
+    this.srv.post('',this.music).subscribe(resposta => {
       console.log(resposta);
     });
     alert("Adicionado a seu diário musical!");
