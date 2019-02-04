@@ -22,6 +22,8 @@ export class CadastroMusicComponent implements OnInit {
     novaMusic: ''
   }
 
+  trocou: boolean = false
+
   constructor(private srv: CadastroService, private fb: FormBuilder) { }
 
   createForm() {
@@ -47,6 +49,10 @@ export class CadastroMusicComponent implements OnInit {
     });
     alert("Adicionado a seu diário musical!");
     this.formulario.reset();
+  }
+
+  troca() {
+    this.trocou = !this.trocou;
   }
 
 }
