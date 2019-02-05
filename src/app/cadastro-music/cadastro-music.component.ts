@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms'
 import { User } from '../models/user'
 import { CadastroService } from '../service/cadastro.service';
+import { MUSICA } from 'src/environments/endpoint';
 
 @Component({
   selector: 'app-cadastro-music',
@@ -34,7 +35,7 @@ export class CadastroMusicComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    this.srv.get('').subscribe(resposta => {
+    this.srv.get(MUSICA).subscribe(resposta => {
       console.log(resposta);
       this.musica = resposta;
     })
@@ -42,7 +43,7 @@ export class CadastroMusicComponent implements OnInit {
   }
   cadastro() {
     this.novaMusic = this.formulario.getRawValue();
-    this.srv.post('',this.music).subscribe(resposta => {
+    this.srv.post(MUSICA,this.music).subscribe(resposta => {
       console.log(resposta);
     });
     alert("Adicionado a seu diário musical!");

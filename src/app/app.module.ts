@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { CadastroUserComponent } from './cadastro-user/cadastro-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroMusicComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroUserComponent
   ],
   imports: [
     BrowserModule,
