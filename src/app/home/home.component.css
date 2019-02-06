@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: cornsilk;
+    border-radius: 3rem;
+    margin-top: 5rem;
+}
+.flex{
+    width: 70%
+}
+.table .thead-light th{
+    background-color: transparent;
+    border-color: transparent;
+}

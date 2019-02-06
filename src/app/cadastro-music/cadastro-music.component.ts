@@ -11,7 +11,6 @@ import { MUSICA } from 'src/environments/endpoint';
 })
 export class CadastroMusicComponent implements OnInit {
 
-  musica: Array<any> = new Array<any>();
 
   formulario: FormGroup;
 
@@ -23,23 +22,21 @@ export class CadastroMusicComponent implements OnInit {
     novaMusic: ''
   }
 
+  trocou: boolean = false
+
   constructor(private srv: CadastroService, private fb: FormBuilder) { }
 
   createForm() {
     this.formulario = this.fb.group({
       nomeDoCantor: [''],
       generoDaMusica: [''],
-      nomeDaMusica: ['']
+      nomeDaMusica: [''],
+      usuarioId: []
     })
   }
 
   ngOnInit() {
     this.createForm();
-    this.srv.get(MUSICA).subscribe(resposta => {
-      console.log(resposta);
-      this.musica = resposta;
-    })
-
   }
   cadastro() {
     this.novaMusic = this.formulario.getRawValue();
@@ -48,6 +45,10 @@ export class CadastroMusicComponent implements OnInit {
     });
     alert("Adicionado a seu diário musical!");
     this.formulario.reset();
+  }
+
+  troca() {
+    this.trocou = !this.trocou;
   }
 
 }

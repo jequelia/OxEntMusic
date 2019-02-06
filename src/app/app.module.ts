@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { CadastroUserComponent } from './cadastro-user/cadastro-user.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CadastroUserComponent } from './cadastro-user/cadastro-user.component';
     CadastroMusicComponent,
     NavbarComponent,
     LoginComponent,
-    CadastroUserComponent
+    CadastroUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

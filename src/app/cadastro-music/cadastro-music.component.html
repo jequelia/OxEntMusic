@@ -1,13 +1,30 @@
-<div class="container">
+<div class="titulos">
+    <div class="titulo1">
+        <h1>Bem-Vindo ao diário musical</h1>
+    </div>
+    <div class="titulo2">
+        <h2>Aqui você ira poder salvar suas músicas favoritas!</h2>
+    </div>
+    <div class="titulo3">
+        <h3>Vamos começar!!!</h3>
+    </div>
+</div>
+<div class="btn-flex">
+    <button class="btn btn-danger" (click)="troca()">Adicionar música</button>
+</div>
+<div class="container" *ngIf="trocou">
     <div class="flex">
         <form (ngSubmit)="cadastro()" [formGroup]="formulario">
             <div class="inputs">
-                <label for="nomeDoCantor">Nome do Cantor:</label>
-                <input id="nomeDoCantor" type="text" name="nomeDoCantor" class="form-control" placeholder="Nome do Cantor" formControlName="nomeDoCantor">
-                <label for="generoDaMusica">Gênero da Música:</label>
-                <input id="generoDaMusica" type="text" name="generoDaMusica" class="form-control" placeholder="Gênero da música" formControlName="generoDaMusica">
-                <label for="nomeDaMusica">Nome da Música:</label>
-                <input id="nomeDaMusica" type="text" name="nomeDaMusica" class="form-control" placeholder="Nome da Música" formControlName="nomeDaMusica">
+                <label id="nc1" for="nomeDoCantor">Nome do Cantor:</label>
+                <input id="nomeDoCantor" type="text" name="nomeDoCantor" class="form-control" placeholder="Nome do Cantor"
+                    formControlName="nomeDoCantor">
+                <label id="gm2" for="generoDaMusica">Gênero da Música:</label>
+                <input id="generoDaMusica" type="text" name="generoDaMusica" class="form-control" placeholder="Gênero da música"
+                    formControlName="generoDaMusica">
+                <label id="nm3" for="nomeDaMusica">Nome da Música:</label>
+                <input id="nomeDaMusica" type="text" name="nomeDaMusica" class="form-control" placeholder="Nome da Música"
+                    formControlName="nomeDaMusica">
             </div>
             <button class="btn btn-danger" submit type="submit">Adicionar</button>
         </form>
@@ -15,3 +32,4 @@
     </div>
 
 </div>
+<app-home></app-home>
